@@ -1,0 +1,65 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Clock container */
+.clock-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Individual time blocks */
+.hours, .minutes, .seconds, .mili {
+  background: rgba(0, 255, 255, 0.2);
+  padding: 20px 25px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.6),
+              0 0 20px rgba(0, 255, 255, 0.5);
+  text-align: center;
+  min-width: 80px;
+}
+
+
+/* Hover effect */
+.clock-body:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .clock-body {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .hours, .minutes, .seconds, .mili {
+    min-width: 100px;
+    font-size: clamp(1.5rem, 8vw, 3rem);
+  }
+}
