@@ -16,7 +16,7 @@ search.addEventListener("click", () => {
         throw new Error("User not found");
       }
       return response.json();})
-  .then((data) => {
+  .then((data) =>{
     displayName.textContent = data.name || data.login;
 
         
