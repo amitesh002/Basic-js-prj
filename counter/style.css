@@ -1,11 +1,29 @@
-body{
+ body {
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;    
 }
+
+
 
 .js-button{
     padding: 8px 15px ;
     margin: 2px;
-    border-radius: 5px;
-    background-color: aqua;
     border: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgb(98, 0, 255)
+    
+}
+
+.card{
+    background: #fff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
